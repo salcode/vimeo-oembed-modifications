@@ -19,3 +19,9 @@ function my_slug_vimeo_oembed_mods( $param_str ) {
 	return 'title=0&byline=0&portrait=0';
 }
 ```
+
+## Road Map
+
+Ultimately, I'd like this plugin to pass along a predefined set of parameters.
+For this reason, I strongly suggest overwriting the `$param_str` (as in the
+example) rather than appending to it.
