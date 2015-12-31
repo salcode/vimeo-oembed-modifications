@@ -18,6 +18,9 @@ if ( ! defined( 'WPINC' ) ) {
 
 add_filter('oembed_fetch_url', 'fe_vom_oembed_fetch_url', 10, 3);
 
+register_activation_hook(   __FILE__, 'fe_vom_flush_cached_vimeo_oembeds' );
+register_deactivation_hook( __FILE__, 'fe_vom_flush_cached_vimeo_oembeds' );
+
 function fe_vom_oembed_fetch_url( $provider, $url, $args = array() ) {
 
 	// make no changes unless this is a vimeo video
@@ -30,4 +33,16 @@ function fe_vom_oembed_fetch_url( $provider, $url, $args = array() ) {
 	$provider .= $str_to_add;
 
 	return $provider;
+}
+
+function fe_vom_flush_cached_vimeo_oembeds() {
+	global $wpdb;
+
+	$sql = "DELETE FROM {$wpdb->postmeta} WHERE `meta_key` LIKE '_oembed_%' AND `meta_value` LIKE '%_player.vimeo.com/video_%'";
+
+	$wpdb->query( $sql );
+
+	if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+		error_log( 'Plugin Vimeo oEmbed Modifications Flushed Vimeo oEmbeds (due to plugin activation or deactivation)' );
+	}
 }
