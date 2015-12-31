@@ -1,0 +1,10 @@
+{
+	"name": "salcode/vimeo-oembed-modifications",
+	"description": "A WordPress plugin that adds a filter 'fe_vimeo_oembed_mods' that can be used to add URL arguments to the oEmbed requests to Vimeo",
+	"type": "wordpress-plugin",
+	"homepage": "https://github.com/salcode/vimeo-oembed-modifications",
+	"license": "GPL-2.0+",
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
