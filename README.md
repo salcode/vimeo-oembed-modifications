@@ -13,6 +13,6 @@ to add parameters.
 add_filter( 'fe_vimeo_oembed_mods', 'my_slug_vimeo_oembed_mods' );
 
 function my_slug_vimeo_oembed_mods( $param_str ) {
-	return $param_str . 'title=0&byline=0&portrait=0';
+	return 'title=0&byline=0&portrait=0';
 }
 ```
