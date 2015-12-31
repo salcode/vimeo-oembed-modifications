@@ -7,6 +7,9 @@ WordPress plugin to modify the src attribute in a Vimeo oEmbed.
 After activating this plugin,  you can use the `fe_vimeo_oembed_mods` filter
 to add parameters.
 
+You can view of a list of the parameters at
+https://developer.vimeo.com/apis/oembed
+
 ### Example
 
 ```
