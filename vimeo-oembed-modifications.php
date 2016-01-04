@@ -39,7 +39,7 @@ function fe_vom_oembed_fetch_url( $provider, $url, $args = array() ) {
 
 	if ( '' === $str_to_add ) { return $provider; }
 
-	$provider .= $str_to_add;
+	$provider .= ( '&' !== $str_to_add[0] ? '&' : '' ) .  $str_to_add;
 
 	return $provider;
 }
