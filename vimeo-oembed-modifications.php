@@ -3,7 +3,7 @@
  * Plugin Name: Vimeo oEmbed Modifications
  * Plugin URI: https://github.com/salcode/vimeo-oembed-modifications
  * Description: Adds a filter "fe_vimeo_oembed_mods" that can be used to add URL arguments to the oEmbed request
- * Version: 1.2.1
+ * Version: 1.2.2
  * Author: Sal Ferrarello
  * Author URI: http://salferrarello.com/
  * GitHub Plugin URI: https://github.com/salcode/vimeo-oembed-modifications

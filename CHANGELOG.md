@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.2] - 2016-01-03
+### Fixed
+- Filter fe_vimeo_oembed_mods now supports $str_to_add when a leading & is
+or is not present
+
 ## [1.2.1] - 2016-01-03
 ### Fixed
 - Correct fe_vom_oembed_fetch_url() returning an undefined variable when exiting early
